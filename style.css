@@ -1,0 +1,1328 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+html,body{
+    overflow-x: hidden;
+    width: 100%;
+}
+
+@font-face{
+    font-family: "SST";
+    src: url(font/SST-Medium.woff2) format('woff2');
+    font-weight: normal;
+    
+}
+
+@font-face{
+    font-family: "SST Roman";
+    src: url(font/SST-Roman.woff2) format('woff2');
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: "SST Light";
+    src: url(font/SST-Light.woff2) format('woff2');
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: "SST Ultralight";
+    src: url(font/SST-UltraLight.woff2) format('woff2');
+    font-weight: normal;
+}
+
+.upperSection{
+    background-color: black;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+
+
+}
+
+.upperSection img{
+    width: 100px;
+    
+}
+
+.navbar{
+    width: 100%;
+    height: 64px;
+    position: sticky;
+    top: 0px;
+    z-index: 15;
+    background-color: white;
+}
+
+
+.NavbarforDesktop{
+   
+    padding: 0.5rem 1.75rem;
+    
+
+}
+
+.navsections{
+    display: flex;
+    height: 65px;
+    justify-content: space-between;
+}
+
+.Left-Section{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: SST;
+    
+}
+
+.Left-Section ul{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+
+    
+}
+
+.Left-Section ul li {
+    text-decoration: none;
+    list-style: none;
+    font-size: 0.9rem;
+    
+}
+
+.Left-Section ul li a:hover{
+    color:#0070cb;
+}
+
+.Left-Section ul li a{
+    color: black;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+}
+
+.Left-Section ul li svg{
+    
+    fill: grey;
+    font-size: 15px;
+    position: relative;
+    top: 5px;
+    
+}
+
+.Left-Section ul li a:hover .icon_svg{
+    fill: #0070cb;
+}
+
+
+.signin-btn{
+    border: none;
+    color: white;
+    border-radius: 20px;
+    font-weight:500px;
+    padding: 6px 12px;
+    font-family: SST ;
+    background-color: #0070cb;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.signin-btn:hover{
+    background-color: #034f8d;
+    box-shadow: 0 0 0 4px white ,0 0 0 6px #004d99;
+}
+
+.Right-Section{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.NavbarforMobile{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+}
+
+.mobile_left{
+    display: flex;
+    gap: 15px;
+}
+
+
+@media (max-width:768px){
+    .NavbarforMobile{
+        display: flex;
+    }
+
+    .NavbarforDesktop{
+        display: none;
+    }
+}
+
+
+/* HERO SECTION */
+
+.hero{
+    /* width: 100%;
+    height: 100%; */
+    position: relative;
+}
+
+.banner_img{
+    
+    width: 100%;
+    height: 100%;
+    
+}
+
+.dark_overlay{
+position: absolute;
+width: 100%;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-image: linear-gradient(to right,rgba(43, 42, 42, 0.8),rgba(0, 0, 0,0));
+}
+
+.content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 150px;
+    left: 20px;
+    padding-left: 40px;
+    align-items: flex-start;
+    gap: 30px;
+    z-index: 2;
+    /* border: 2px solid red; */
+
+
+}
+
+.NBA_banner{
+    width: 40%;
+    /* width: 400px; */
+    height: auto;
+    object-fit: cover;
+}
+
+.content_para{
+    display: flex;
+    flex-direction: column;
+    /* width: 40%; */
+    gap: 20px;
+
+}
+
+.content_para_heading{
+    font-weight: 500;
+    font-family: "SST Light";
+    color: white;
+    font-size: 45px;
+    
+}
+
+.content_para p{
+    font-family: "SST Light";
+    color: white;
+    font-size: 19px;
+}
+
+.buy_btn{
+    background-color: orangered;
+    border: none;
+    outline: none;
+    font-family: SST;
+    border-radius: 20px;
+    padding: 10px 17px;
+    font-weight: 600;
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.buy_btn:hover{
+    background-color: rgb(183, 52, 5);
+    box-shadow: 0 0 0 4px #422b4c ,0 0 0 6px orangered;
+}
+
+
+@media (max-width:1200px){
+    .content{
+        padding-left: 35px;
+        padding-right: 200px;
+        top: 120px;
+    }
+
+    .hero{
+        height: 645px;
+    }
+
+    .banner_img{
+        width: 100%;
+    }
+
+    .NBA_banner{
+        width: 40%;
+    }
+}
+
+@media(max-width:768px){
+    .dark_overlay2{
+        width: 100%;
+        position: absolute;
+        top: 80%;
+        height: 300px;
+        background-image: linear-gradient(to top,rgb(12 11 11 / 100%),rgb(124 54 137));
+        box-shadow: -9px -12px 20px 11px rgb(123 54 132);
+    }
+
+    .content{
+        text-align: center;
+        padding: 37px;
+    }
+
+    .NBA_banner{
+        width: 80%;
+
+    }
+
+    .content{
+        top: 400px;
+        align-items: center;
+        
+    }
+
+    
+}
+
+
+@media(max-width:614px){
+
+    .content_para{
+        width: 90%;
+    }
+
+    
+
+    .content_para_heading{
+        font-size: 30px;
+    }
+    
+}
+
+@media(max-width:550px){
+
+    .content_para p{
+        font-size: 15px;
+    }
+}
+
+@media(max-width:406px){
+
+    .content{
+        padding: 0;
+    }
+
+    .content_para_heading{
+
+        font-size: 19px;
+    }
+
+    .content_para p{
+        font-size: 12px;
+    }
+
+    .dark_overlay2{
+        height: 140px;
+    }
+}
+
+
+.Cards{
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+.card_section_cards{
+
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill,minmax(190px,1fr));
+    grid-gap: 10px;
+    grid-auto-flow: row;
+    grid-auto-rows: 116px;   
+}
+
+
+
+
+
+
+
+.card_section_cards >div>picture>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    filter: contrast(60%);
+}
+
+.card_section_cards >div>picture>img:hover{
+    transform: translateY(-10px);
+    filter: contrast(100%);
+}
+
+@media (max-width:769px){
+
+    .card_section_cards{
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 200px;
+        grid-gap: 20px;
+
+    }
+}
+
+@media (max-width:405px){
+
+    .card_section_cards{
+        margin-top: 50px;
+
+    }
+
+}
+
+/* Playstation_banner */
+
+.play_section{
+    
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    
+}
+
+.play_left_section{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 65px;
+}
+
+.play_left_Header_text{
+    font-family: "SST Ultralight";
+    font-size: 35px;
+} 
+
+.play_left_Para{
+    font-family: "SST Light";
+    font-size: 20px;
+    line-height: 30px;
+    
+}
+
+.play_right_section{
+    width: 60%;
+}
+
+.play_right_section>picture>img{
+    width: 80%;
+    height: 80%;
+}
+
+.play_learn_more{
+    border: none;
+    color: white;
+    border-radius: 20px;
+    font-weight:500px;
+    padding: 10px 20px;
+    font-family: SST ;
+    background-color: #0070cb;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.play_learn_more:hover{
+    background-color: #034f8d;
+    box-shadow: 0 0 0 4px white ,0 0 0 6px #004d99;
+}
+
+.play_buy{
+    background-color: orangered;
+    border: none;
+    outline: none;
+    font-family: SST;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: 600;
+    color: white;
+    
+    transition: all 0.3s ease-in-out;
+}
+
+.play_buttons{
+    display: flex;
+    gap: 15px;
+}
+.play_buy:hover{
+    background-color: rgb(183, 52, 5);
+    box-shadow: 0 0 0 4px rgb(255, 255, 255) ,0 0 0 6px orangered;
+}
+
+@media (max-width:768px){
+    .play_section{
+        flex-direction: column-reverse;
+        
+    }
+
+    .play_right_section{
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .play_left_section{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card_section_cards >div>picture>img{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+@media (max-width:640px){
+    .play_left_Para{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:426px){
+    .play_left_section{
+        padding: 6px;
+    }
+}
+
+@media (max-width:375px){
+    .play_left_Header_text{
+        font-size: 30px;
+    }
+}
+
+
+
+/* flexbox */
+.more_devices{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    padding: 0 10%;
+
+    gap: 30px;
+    
+}
+
+.more_devices_card{
+    text-align: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.more_devices_card>picture>img{
+
+    width: 100%;
+    aspect-ratio: 8/9;
+    object-fit: contain;
+    filter: grayscale(60%);
+    transition: all 0.3s ease-in-out;
+
+}
+
+.more_devices_card>picture>img:hover{
+    transform: translateY(-20px);
+    filter: none;
+}
+
+
+
+.more_devices_card p{
+    
+    font-family: "SST Light";
+    font-weight: 500;
+}
+
+
+@media (max-width: 768px){
+    .more_devices{
+        padding: 5px;
+    
+        
+    }
+
+    .more_devices_card{
+        min-width: 30%;
+        height: 290px;
+        padding: 10px;
+        /* border: 2px solid blue; */
+    }
+
+    .more_devices_card p{
+        
+        transform: translateY(-70px);
+        padding: 40px;
+    }
+}
+
+
+@media(max-width: 455px){
+    .more_devices{
+        padding: 6px;
+    }
+
+    .more_devices_card{
+        min-width: 60%;
+        height: 300px;
+        padding: 10px;
+        /* border: 2px solid blue; */
+    }
+
+    .more_devices_card p{
+        
+        transform: translateY(-70px);
+        padding: 40px;
+    }
+}
+
+/* NEW RELEASES SECTION */
+.new_releases_section{
+
+    background-color: rgba(18, 19, 20, 1);
+    color: white;
+    margin-top: 50px;
+    padding:5%;
+   
+}
+
+.new_releases_section h2{
+    font-family: "SST Light";
+    font-size: 35px;
+    padding: 40px;
+    text-align: center;
+    
+}
+
+.new_relases_cards{
+    display: grid;
+    grid-template-columns: repeat(6 ,minmax(220px,1fr));
+    grid-auto-rows: 250px;
+    gap: 10px;
+    margin-top: 30px;
+    
+    
+}
+
+
+.new_relases_card{
+
+    display: flex;
+    flex-direction: column;
+   
+    align-items: flex-start;
+    
+    height: 200px;
+
+
+}
+
+.new_releases_card P{
+    font-family: "SST Light";
+}
+
+.new_releases_card img{
+    border-radius: 15px;
+    object-fit: cover;
+    max-width: 220px;
+    height: 220px;
+    width: 100%;
+    filter: brightness(70%);
+    transition: all 0.3s ease-in-out;
+}
+
+.new_releases_card img:hover{
+    transform: scale(1.03);
+    filter: brightness(100%);
+}
+
+
+@media (max-width: 1450px) {
+    .new_relases_cards{
+        grid-template-columns: repeat(5 ,minmax(220px,1fr));
+    }
+}
+
+@media (max-width: 1240px){
+    .new_relases_cards{
+        grid-template-columns: repeat(4 ,minmax(220px,1fr));
+    }
+}
+@media (max-width: 1000px){
+    .new_relases_cards{
+        grid-template-columns: repeat(3 ,minmax(220px,1fr));
+    }
+}
+@media (max-width: 740px){
+    .new_releases_card img{
+       
+        
+        max-width: 180px;
+        height: 180px;
+        
+    }
+}
+
+@media (max-width: 740px){
+    .new_relases_cards{
+        grid-template-columns: repeat(2 ,minmax(220px,1fr));
+    }
+    
+}
+
+
+@media (max-width: 426px){
+
+    .new_relases_cards{
+        grid-template-columns: repeat(2 ,minmax(220px,1fr));
+        gap: 0px;
+        grid-auto-rows: 190px;
+    }
+    
+    .new_releases_card img{
+       
+        max-width: 150px;
+        height: 150px;
+        
+    }
+
+    .new_releases_section h2{
+        font-size: 24px;
+        padding: 20px;
+    }
+    
+}
+
+@media (max-width: 376px){
+
+    .new_relases_card{
+        padding: 200px;
+    }
+
+    .new_releases_card img{
+       
+        max-width: 130px;
+        height: 130px;
+        
+    }
+
+    .new_releases_card P{
+        width: 150px;
+    }
+
+    .new_releases_section h2{
+        font-size: 20px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 326px){
+
+    .new_relases_cards{
+        grid-template-columns: fit-content(527px);
+        text-align: center;
+        padding: 20px;
+    }
+
+    .new_releases_card img{
+        max-width: 250px;
+        height: 150px;
+    }
+
+
+    .new_releases_section h2{
+        font-size: 20px;
+        padding: 20px;
+    }
+    
+}
+
+
+/* MONTHLY SECTION  */
+
+.monthly_section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.monthly_section>picture>img{
+    width: 108%;
+    height: 108%;
+}
+
+.monthly_text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 5% 6%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.monthly_text h2{
+    font-family: "SST Ultralight";
+    color: white;
+    font-size: 40px;
+}
+.monthly_text h1{
+    font-family: "SST";
+    font-weight: bold;
+    color: white;
+    font-size: 45px;
+}
+.monthly_text p{    
+    padding-right: 30%;
+    line-height: 30px;
+    margin-top: 20px;
+    font-family: "SST Ultralight";
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+.monthly_text button{
+    border: none;
+    color: black;
+    border-radius: 20px;
+    font-weight:500px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-family: SST ;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.monthly_text button:hover{
+    
+    box-shadow: 0 0 0 4px #422b4c ,0 0 0 6px white;
+}
+
+.monthly_overlay{
+    position: absolute;
+    top: 80%;
+    height: 500px;
+    background-color: #26254f;
+    width: 100%;
+    box-shadow: -9px -11px 29px 3px #26254f;
+    z-index: -1;
+}
+
+@media (max-width: 1024px){
+    .monthly_text p{
+        padding-right: 40%;
+    }
+}
+
+@media (max-width: 768px){
+    .monthly_text{
+        top: 41%;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .monthly_text p{
+        padding: 0;
+    }
+}
+
+@media (max-width: 425px){
+    
+    .monthly_text h2{
+        font-size: 30px;
+    }
+
+    .monthly_text h1{
+        font-size: 33px;
+    }
+
+    .monthly_text p{
+        font-size: 18px;
+    }
+}
+
+
+.monthly_cards{
+    display: flex;
+    position: absolute;
+    top: 380px;
+    margin: 0 50px;
+    
+
+}
+
+.monthly_card{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+}
+
+.monthly_card p{
+    font-family: "SST Roman";
+    color: white;
+    font-size: 26px;
+}
+
+.monthly_card>picture>img{
+    width: 90%;
+    min-width: 380px;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 7px -2px 30px 0px black;
+    transition: all 0.3s ease-in-out ;
+}
+
+.monthly_card>picture>img:hover{
+    transform: scale(1.01);
+    box-shadow:11px -8px 35px 0px black ;
+}
+
+
+@media (max-width:1350px){
+    .monthly_card>picture>img{
+        min-width: 250px;
+    }
+
+    .monthly_card p{
+        font-size: 24px;
+    }
+}
+
+@media (max-width:950px){
+    .monthly_card>picture>img{
+        min-width: 180px;
+    }
+
+    .monthly_card p{
+        font-size: 21px;
+    }
+}
+
+@media (max-width:768px){
+    .monthly_cards{
+        flex-direction: column;
+        top: 900px;
+        
+    }
+
+    .monthly_overlay{
+        height: 1000px;
+    }
+
+
+    .monthly_card>picture>img{
+        min-width: 290px;
+        
+    }
+
+}
+
+@media (max-width:580px){
+    .monthly_cards{
+        flex-direction: column;
+        top: 650px;
+        margin: 0 -15px;
+        
+    }
+}
+
+@media (max-width:376px){
+    .monthly_cards{
+        flex-direction: column;
+        top: 580px;
+        margin: 0 -10px;
+        
+    }
+
+    .monthly_card>picture>img{
+        min-width: 180px;
+    }
+}
+
+
+.follow_section{
+    margin-top: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 50px;
+   
+}
+
+.follow_section h1{
+    font-family: "SST Ultralight";
+    font-size: 30px;
+
+}
+
+
+.follow_content_images{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 40%;
+    column-gap: 30px;
+    
+}
+
+.follow_content_images>img{
+    width: 90%;
+    
+}
+
+@media (max-width:1000px){
+    .follow_section h1{
+        font-size: 25px;
+    
+    }
+}
+
+@media (max-width:768px){
+
+    .follow_section{
+        margin-top: 700px;
+    }
+
+ .follow_content_images{
+    grid-template-columns: repeat(2, 1fr);
+
+}
+}
+
+@media (max-width:581px){
+    .follow_section{
+        margin-top: 800px;
+    }
+}
+
+
+@media (max-width:426px){
+    .follow_section{
+        margin-top: 800px;
+    }
+}
+
+@media (max-width:376px){
+    .follow_section{
+        margin-top: 900px;
+        padding: 1px;
+    }
+}
+
+
+
+
+.footer-section {
+    width: 100%;
+    height: 100%;
+    background-color: #00439c;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 80px;
+}
+
+.footer-section-logo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    border-bottom: 1px solid #3d69b0;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer-section-logo-heading {
+    font-size: 50px;
+    color: white;
+    font-family: 'SST Light';
+}
+
+
+@media screen and (max-width : 600px) {
+    .footer-section-logo-heading {
+        font-size: 25px;
+    }
+}
+
+
+.footer-section-logo-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #3d69b0;
+    padding-bottom: 15px;
+    gap: 25px;
+}
+
+.footer-section-logo-content-left {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-section-logo-content-right {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    flex-direction: row;
+}
+
+.footer-section-logo-content {
+    color: white;
+    margin: 15px 0;
+}
+
+.footer-section-logo-content h2 {
+    font-family: "SST";
+    font-size: 17px;
+}
+
+.footer-section-logo-content p {
+    font-family: "SST Light";
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-section-logo-content p:hover {
+    color: rgb(211, 198, 198);
+}
+
+.footer-section-logo-content-one {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 7px;
+}
+
+.footer-section-logo-content-two {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 200px;
+}
+
+.footer-section-logo-content-three {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 7px;
+}
+
+.footer-section-logo-content-four {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 7px;
+}
+
+.footer-section-logo-content-five {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 7px;
+}
+
+.footer-section-logo-content-six {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 7px;
+}
+
+.footer-section-logo-content-six-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.footer-section-logo-content-six-icons img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.footer-section-logo-content2 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3d69b0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+.footer-section-logo-content2-first {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.footer-section-logo-content2-first-headings {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'SST Light';
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.footer-section-logo-content2-first img {
+    width: 100px;
+    height: 100px;
+}
+
+.footer-section-logo-content2 p {
+    color: white;
+    font-family: "SST Light";
+    width: 95%;
+    font-size: 14.5px;
+    line-height: 20px;
+}
+
+.footer-section-logo-content3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.footer-section-logo-content3-left {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.footer-section-logo-content3-left h3 {
+    font-family: "SST Light";
+    font-size: 14px;
+}
+
+.footer-section-logo-content3-right {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    color: white;
+
+}
+
+.footer-section-logo-content3-right div {
+    font-family: "SST Light";
+    font-size: 14px;
+}
+
+
+@media screen and (max-width : 1200px) {
+    .footer-section-logo-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section-logo-content3 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}
+
+@media screen and (max-width : 800px) {
+    .footer-section {
+        padding: 10px 60px;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .footer-section {
+        padding: 10px 40px;
+    }
+
+    .footer-section-logo-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section-logo-content-left {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section-logo-content-right {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section-logo-content3 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section-logo-content3-right div {
+        font-family: "SST Light";
+        font-size: 10px;
+    }
+
+    .footer-section-logo-content2 p {
+        font-size: 12px;
+    }
+}
